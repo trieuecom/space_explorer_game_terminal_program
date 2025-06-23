@@ -1,91 +1,68 @@
-# 🚀 Starbound: Journey to Sector 9-Delta
+# 🚀 Starbound: Journey to Sector 9-Delta (Python Terminal Game)
 
-**Starbound** is a terminal-based space exploration game written in Python. Players navigate a spaceship from Kepler-452b across a hostile and resource-scarce space grid to reach the destination at **Sector 9-Delta**. 
-Strategize your movement, manage fuel, avoid hazards, and interact with the environment to survive and succeed.
+## 🎯 Project Overview
 
----
+**Starbound** is a grid-based terminal game where players pilot a spaceship from Kepler-452b across a space sector filled with hazards, resources, and unknown threats. The goal is to safely reach **Sector 9-Delta** before running out of fuel or getting destroyed.
 
-## 🧠 Game Concept
-
-You are the pilot of a spacecraft tasked with a dangerous mission: reach a distant destination through space filled with asteroids, enemies, and unexpected events. Your success depends on:
-- Careful fuel management
-- Avoiding or surviving enemy encounters
-- Mining and using minerals
-- Repairing your ship at the right time
-- Reaching the final destination before running out of resources
+Written in **Python**, the game demonstrates **object-oriented programming**, interactive I/O, and map-based exploration logic. It simulates survival mechanics in a simple, engaging format suitable for learning game loops and class interactions.
 
 ---
 
-## 🗂️ Project Structure
+## 🌌 Game Mechanics
 
-project/
-│
-├── game.py # Main program loop and user interaction
-├── ship.py # Defines the Ship class and all ship-related functionality
-└── space_map.py # Map creation, display, and hazard population
-
+- Control a ship (`@`) navigating a 2D space map
+- Interact with map entities:
+  - `.` = Asteroid (impassable)
+  - `E` = Enemy (damages ship)
+  - `M` = Mineral (collect and use to repair)
+  - `R` = Repair Station (heals if you have minerals)
+  - `X` = Destination
+- Game ends with:
+  - ✅ Victory: reaching destination
+  - ❌ Defeat: running out of fuel or health
 
 ---
 
-## 🕹️ How to Play
+## 🛠️ Core Features
 
-1. Run the game with:
+- Dynamic map creation and population
+- Ship system with:
+  - Position tracking
+  - Fuel and health management
+  - Mineral collection and consumption
+- Real-time status updates
+- Victory/failure condition checking
+- Modular structure using multiple `.py` files
+
+---
+
+## 🧩 Key Modules
+
+| File | Description |
+|------|-------------|
+| `game.py` | Main gameplay loop, command input, and state control |
+| `ship.py` | Ship class with attributes and interaction methods |
+| `space_map.py` | Map creation, entity placement, and rendering |
+
+---
+
+## 🕹️ Gameplay Commands
+
+- `n`, `s`, `e`, `w`: Move in a direction
+- `map`: View current space map
+- `status`: Show ship's current stats
+- `q`: Quit (self-destruct)
+
+---
+
+## ✅ How to Run
+
+1. Ensure all three files are in the same directory:
+   - `game.py`
+   - `ship.py`
+   - `space_map.py`
+
+2. Open a terminal and run:
 
 ```bash
 python3 game.py
-Configure your space map (choose size n >= 2).
-Set your ship's name and initial fuel (1–99 units).
-Place the destination and other map entities:
-. : Asteroid (blocked path)
-E : Enemy (damages health)
-M : Mineral (collectible resource)
-R : Repair station (heals if you have minerals)
-X : Final destination
-Enter commands to move or check status:
-n / s / e / w → Move ship (if within bounds)
-map → View current map
-status → Show ship stats
-q → Self-destruct and quit
-Win if you reach the destination. Lose if fuel or health reaches zero.
-
-## 📦 Features
-
-Customizable map size and content
-Dynamic ship status tracking (fuel, health, minerals)
-Interaction with various space entities
-Game-over logic based on health, fuel, and mission status
-Simple and modular design, easy to expand
-
-## ✅ Requirements
-
-Python 3.7+
-Terminal/command-line access
-No third-party libraries are required.
-
-## ✨ Sample Output
-
->>> STARTING ROUTE: Kepler-452b -> Sector 9-Delta
-Enter size of map (n >= 2): 5
-5 x 5 map initialised.
-
->> CONFIGURING SHIP SYSTEMS
-Enter ship name: Voyager
-Enter fuel (1-99): 20
-
-Status Report - Voyager
--------------------------
-Coordinates    : (0, 0)
-Fuel Level     : 20 units
-Health         : 3
-Minerals       : 00
--------------------------
-
->>> EXECUTING LIFTOFF: EXITING Kepler-452b's ORBIT
->>> AWAITING COMMANDS
-
-Enter (n,e,s,w | map | status): e
-## 📌 Notes
-
-Map coordinates follow [y][x] indexing.
-Ship always starts at (0, 0).
-Be careful with enemy encounters and fuel usage!
