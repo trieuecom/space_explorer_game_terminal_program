@@ -63,6 +63,30 @@ Written in **Python**, the game demonstrates **object-oriented programming**, in
    - `space_map.py`
 
 2. Open a terminal and run:
+3. Follow the prompts to:
+  - Configure map size
+  - Set ship name and fuel
+  - Place destination and hazards
+  - Start your mission!
+
+## Example
+
+>>> STARTING ROUTE: Kepler-452b -> Sector 9-Delta
+Enter size of map (n >= 2): 4
+4 x 4 map initialised.
+
+>> CONFIGURING SHIP SYSTEMS
+Enter ship name: Odyssey
+Enter fuel (1-99): 15
+
+>>> EXECUTING LIFTOFF: EXITING Kepler-452b's ORBIT
+
+Enter (n,e,s,w | map | status): s
++1 mineral! Minerals: 1
+Enter (n,e,s,w | map | status): e
+Ship repaired! Health: 3/3
+...
+>>> MISSION COMPLETED
 
 ```bash
 python3 game.py
