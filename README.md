@@ -48,7 +48,7 @@ status → Show ship stats
 q → Self-destruct and quit
 Win if you reach the destination. Lose if fuel or health reaches zero.
 
-📦 Features
+## 📦 Features
 
 Customizable map size and content
 Dynamic ship status tracking (fuel, health, minerals)
@@ -56,13 +56,13 @@ Interaction with various space entities
 Game-over logic based on health, fuel, and mission status
 Simple and modular design, easy to expand
 
-✅ Requirements
+## ✅ Requirements
 
 Python 3.7+
 Terminal/command-line access
 No third-party libraries are required.
 
-✨ Sample Output
+## ✨ Sample Output
 
 >>> STARTING ROUTE: Kepler-452b -> Sector 9-Delta
 Enter size of map (n >= 2): 5
@@ -84,7 +84,7 @@ Minerals       : 00
 >>> AWAITING COMMANDS
 
 Enter (n,e,s,w | map | status): e
-📌 Notes
+## 📌 Notes
 
 Map coordinates follow [y][x] indexing.
 Ship always starts at (0, 0).
